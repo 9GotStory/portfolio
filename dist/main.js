@@ -1,24 +1,24 @@
-// // fetch github
-// const APIURL = "https://api.github.com/users/9GotStory";
-// const getProfile = async () => {
-//   const response = await fetch(APIURL);
-//   const data = await response.json();
-//   return data;
-// };
+// fetch github
+const APIURL = "https://api.github.com/users/9GotStory";
+const getProfile = async () => {
+  const response = await fetch(APIURL);
+  const data = await response.json();
+  return data;
+};
 
-// getProfile().then((data) => {
-//   const { name, avatar_url, html_url, bio } = data;
-//   const profileAvatar = document.querySelector("#profileAvatar");
-//   const profileName = document.querySelector("#profileName");
-//   const githubUrl = document.querySelector("#githubUrl");
-//   const bioProfile = document.querySelector("#bioProfile");
+getProfile().then((data) => {
+  const { name, avatar_url, html_url, bio } = data;
+  const profileAvatar = document.querySelector("#profileAvatar");
+  const profileName = document.querySelector("#profileName");
+  const githubUrl = document.querySelector("#githubUrl");
+  const bioProfile = document.querySelector("#bioProfile");
 
-//   profileAvatar.setAttribute("src", avatar_url);
-//   githubUrl.setAttribute("href", html_url);
-//   profileName.textContent = name;
-//   bioProfile.textContent = bio;
+  profileAvatar.setAttribute("src", avatar_url);
+  githubUrl.setAttribute("href", html_url);
+  profileName.textContent = name;
+  bioProfile.textContent = bio;
 
-// });
+});
 
 const toggleMode = document.querySelector("#toggleMode");
 const textMode = document.querySelector("#textMode");
